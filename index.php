@@ -50,16 +50,16 @@ include "version.php";
       white-space:nowrap
    }
    </style>
-    <title><?php echo getCallsign($mmdvmconfigs) ?> - MMDVM-Dashboard by DG9VH</title>
+    <title><?php echo getCallsign($mmdvmconfigs) ?> - MMDVM_Bridge</title>
   </head>
   <body>
   <div class="page-header" style="position:relative;">
-  <h1><small>MMDVM-Dashboard by DG9VH  <?php
+  <h1><small>MMDVM_Bridge Dashboard  <?php
   echo _("for");
   if (getConfigItem("General", "Duplex", $mmdvmconfigs) == "1") {
-   echo " "._("Repeater");
+   echo " "._("Bridge");
   } else {
-   echo " "._("Hotspot");
+   echo " "._("Bridge");
   }
   ?>:</small>  <?php echo getCallsign($mmdvmconfigs) ?><br>
   <small>DMR-Id: <?php echo getDMRId($mmdvmconfigs) ?></small></h1><hr>
@@ -227,7 +227,7 @@ if (defined("ENABLEYSFGATEWAY")) {
 <?php
 $lastReload = new DateTime();
 $lastReload->setTimezone(new DateTimeZone(TIMEZONE));
-echo "MMDVMHost-Dashboard V ".VERSION." | "._("Last Reload")." ".$lastReload->format('Y-m-d, H:i:s')." (".TIMEZONE.")";
+echo "MMDVM_Bridge Dashboard V ".VERSION." | "._("Last Reload")." ".$lastReload->format('Y-m-d, H:i:s')." (".TIMEZONE.")";
 echo '<!--Page generated in '.getLapTime().' seconds.-->';
 ?> |
 <?php
