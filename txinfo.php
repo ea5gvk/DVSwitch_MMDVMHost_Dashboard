@@ -34,8 +34,8 @@ foreach ($lastHeard as $listElem) {
            echo"<td nowrap>$listElem[11]</td>";
          echo"<td nowrap>$listElem[4]</td>";
          echo"<td nowrap>$listElem[5]</td>";
-         if ($listElem[6] == "RF"){
-            echo "<td nowrap><span class=\"badge badge-success\">RF</span></td>";
+         if ($listElem[6] == "TLV"){
+            echo "<td nowrap><span class=\"badge badge-success\">TLV</span></td>";
          }else{
             echo"<td nowrap>$listElem[6]</td>";
          }
@@ -48,8 +48,8 @@ foreach ($lastHeard as $listElem) {
            echo"<td nowrap>$listElem[10]</td>";
          echo"<td nowrap>$listElem[3]</td>";
          echo"<td nowrap>$listElem[4]</td>";
-         if ($listElem[5] == "RF"){
-            echo "<td nowrap><span class=\"badge badge-success\">RF</span></td>";
+         if ($listElem[5] == "TLV"){
+            echo "<td nowrap><span class=\"badge badge-success\">TLV</span></td>";
          }else{
             echo"<td nowrap>$listElem[5]</td>";
          }
