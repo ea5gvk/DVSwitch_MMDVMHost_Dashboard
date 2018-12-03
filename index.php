@@ -63,7 +63,7 @@ include "version.php";
   }
   ?>:</small>  <?php echo getCallsign($mmdvmconfigs) ?><br>
   <small>DMR-Id: <?php echo getDMRId($mmdvmconfigs) ?></small></h1><hr>
-  <h5>MMDVMHost by G4KLX Version: <?php echo getMMDVMHostVersion() ?><br>Firmware: <?php echo getFirmwareVersion();
+  <h5>MMDVM_Bridge Version: <?php echo getMMDVMHostVersion() ?><br>Firmware: <?php echo getFirmwareVersion();
   if (defined("ENABLEDMRGATEWAY")) {
 ?>
 <br>DMRGateway by G4KLX Version: <?php echo getDMRGatewayVersion(); 
