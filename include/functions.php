@@ -475,7 +475,7 @@ function getHeardList($logLines, $onlyLast) {
          $target = $target." ".getTGName($target);
       }
 
-      $source = "RF";
+      $source = "TLV";
       if (strpos($logLine,"network") > 0 ) {
          $source = "Net";
       }
