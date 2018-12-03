@@ -1,17 +1,14 @@
-# MMDVMHost-Dashboard
-Dashboard for MMDVMHost (by G4KLX)
+# MMDVM_Bridge Dashboard
 ==================================
 
 About
 =====
-MMDVMHost-Dashboard is a web-dashboard for visualization of different data like
-system temperatur, cpu-load ... and it shows a last-heard-list.
+MMDVM_Bridge Dashboard is a web-dashboard for visualization of different data like
+system temperature, cpu-load ... and it shows a last-heard-list.
 
-It relies on MMDVMHost by G4KLX (see https://github.com/g4klx/MMDVMHost). At 
-this place a big thank you to Jonathan for his great work he did with this 
-software.
+It relies on MMDVM_Bridge (see https://dvswitch.groups.io/g/main).
 
-Based on G4KLX code, mod by EA4GKQ
+Based on DG9VH code, mod by EA4GKQ
 
 Required are
 ============
@@ -37,8 +34,8 @@ Features
 At the moment there are several information-sections shown:
 * System Info: 
   Here you'll find live info about the host-system itself like CPU-freq, temperature, system-load, cpu-usage, uptime and cpu-idle-time.
-* Repeater Info:
-  Here are some basic repeater info and link-states
+* Bridge Info:
+  Here are some basic Bridge info and link-states
 * Enabled Modes
   This is a list of enabled modes. If green, it's enabled, if grey, it's disabled. If it is red, there is an error-state with MMDVMHost or ircddbgateway.
 * Last Heard List of today's x callsigns:
@@ -57,10 +54,3 @@ Cronjob for updating DMR IDs
 You can use the included script to update the DMR IDs periodically. Copy the files updateDMRIDs to /etc/cron.d/ and updateDMRIDs.sh to /var/www from the cron folder in this repo. The paths may have to be aligned to your system architecture. The Update script will then be executed once every 24 hours at 3:30. For security considerations please make sure that the cron folder is not copied to your web server's www root directory.
 
 If you are using the sqlite3-database, in the database-folder you can find a update-script that updates the database from MARC-database.
-
-
-Contact
-=======
-Feel free to contact the author via email: dg9vh[@]darc.de
-
-Feel free to contact the mod author via email: ea4gkq[@]ure.es
