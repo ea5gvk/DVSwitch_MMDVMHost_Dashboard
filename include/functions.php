@@ -423,6 +423,12 @@ function getHeardList($logLines, $onlyLast) {
                   $ts2ber         = $ber;
                   $ts2rssi        = $rssi;
                   break;
+               case "DMR":
+                  $ts2duration    = $duration;
+                  $ts2loss        = $loss;
+                  $ts2ber         = $ber;
+                  $ts2rssi        = $rssi;
+                  break;
                case "YSF":
                   $ysfduration    = $duration;
                   $ysfloss        = $loss;
@@ -494,6 +500,12 @@ function getHeardList($logLines, $onlyLast) {
             $rssi       = $ts1rssi;
             break;
          case "DMR Slot 2":
+            $duration   = $ts2duration;
+            $loss       = $ts2loss;
+            $ber        = $ts2ber;
+            $rssi       = $ts2rssi;
+            break;
+         case "DMR":
             $duration   = $ts2duration;
             $loss       = $ts2loss;
             $ber        = $ts2ber;
