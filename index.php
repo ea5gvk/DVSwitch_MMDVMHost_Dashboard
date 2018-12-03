@@ -74,7 +74,7 @@ include "version.php";
     $network    = $networks[$key];
     echo "<br>";
     echo _("Configuration").": ".$network['label'];
-    
+
   } else {
     if (strlen(getDMRNetwork()) > 0 ) {
       echo "<br>";
@@ -131,7 +131,7 @@ if (defined("ENABLENETWORKSWITCHING")) {
             echo 'class="btn btn-default navbar-btn">';
           echo '<span class="glyphicon glyphicon-link" aria-hidden="true"></span>&nbsp;'.$network['label'].'</button>';
   	}
-  	
+
   } else {
 ?>
   <button onclick="window.location.href='./scripts/switchnetwork.php?network=DMRPLUS'"  type="button" <?php
@@ -160,7 +160,7 @@ if (defined("ENABLENETWORKSWITCHING")) {
 ?>
     </select>
     <button type="submit" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>&nbsp;<?php echo _("ReflSwitch"); ?></button>
-  
+
   </div></form>
 <?php
   }
@@ -175,7 +175,7 @@ if (!defined("SHOWCPU") AND !defined("SHOWDISK") AND !defined("SHOWRPTINFO") AND
    define("SHOWRPTINFO", "on");
    define("SHOWMODES", "on");
    define("SHOWLH", "on");
-   define("SHOWLOCALTX", "on");	
+   define("SHOWLOCALTX", "on");
 }
 if (defined("SHOWCUSTOM")) {
    print "<div class=\"panel panel-default\">\n";
@@ -194,14 +194,6 @@ if (defined("SHOWCUSTOM")) {
    print "</div>\n";
    print "</div>\n";
 }
-if (defined("SHOWCPU")) {
-   include "include/sysinfo_ajax.php";
-   showLapTime("sysinfo");
-}
-if (defined("SHOWDISK")) {
-   include "include/disk.php";
-   showLapTime("disk");
-}
 if (defined("SHOWRPTINFO")) {
     include "include/repeaterinfo.php";
     showLapTime("repeaterinfo");
@@ -217,6 +209,14 @@ if (defined("SHOWLH")) {
 if (defined("SHOWLOCALTX")) {
    include "include/localtx_ajax.php";
    showLapTime("localtx_ajax");
+}
+if (defined("SHOWCPU")) {
+   include "include/sysinfo_ajax.php";
+   showLapTime("sysinfo");
+}
+if (defined("SHOWDISK")) {
+   include "include/disk.php";
+   showLapTime("disk");
 }
 if (defined("ENABLEYSFGATEWAY")) {
    include "include/ysfgatewayinfo.php";
