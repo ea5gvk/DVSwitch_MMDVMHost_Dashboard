@@ -53,6 +53,7 @@ function getDMRGatewayFileVersion() {
 }
 
 function getFirmwareVersion() {
+   // Keep for possible reuse
    $logPath    = MMDVMLOGPATH."/".MMDVMLOGPREFIX."-".date("Y-m-d").".log";
    $logLines   = explode("\n", `egrep "MMDVM protocol version" $logPath`);
    $firmware   = "n/a";
@@ -64,16 +65,16 @@ function getFirmwareVersion() {
          $firmware = preg_replace('/GitID #([0-9A-Fa-f]{7})/', 'GitID #<a href="http://www.github.com/juribeparada/MMDVM_HS/commit/$1" target=\"_blank\">$1</a>', $firmware);
       }
    }
-   if ($firmware != "n/a") {
-      $fp = fopen('/tmp/MMDVMFirmware.txt', 'w');
-      fwrite($fp, $firmware);
-      fclose($fp);
-   } else {
-      $fp = fopen('/tmp/MMDVMFirmware.txt', 'r');
-      $contents = fread($fp, filesize("/tmp/MMDVMFirmware.txt"));
-      $firmware = $contents;
-   }
-   echo $firmware;
+//   if ($firmware != "n/a") {
+//      $fp = fopen('/tmp/MMDVMFirmware.txt', 'w');
+//      fwrite($fp, $firmware);
+//      fclose($fp);
+//   } else {
+//      $fp = fopen('/tmp/MMDVMFirmware.txt', 'r');
+//      $contents = fread($fp, filesize("/tmp/MMDVMFirmware.txt"));
+//      $firmware = $contents;
+//   }
+   echo "None";
 }
 
 function setDMRNetwork($network) {

@@ -54,7 +54,7 @@ include "version.php";
   </head>
   <body>
   <div class="page-header" style="position:relative;">
-  <h1><small>MMDVM_Bridge Dashboard  <?php
+  <h5><small><center>MMDVM_Bridge Dashboard  <?php
   echo _("for");
   if (getConfigItem("General", "Duplex", $mmdvmconfigs) == "1") {
    echo " "._("Bridge");
