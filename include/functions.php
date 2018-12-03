@@ -277,7 +277,7 @@ function getHeardList($logLines, $onlyLast) {
    $ysfber         = "";
    $ysfrssi        = "";
    $alias          = "";
-   
+
    foreach ($logLines as $logLine) {
       $duration   = "";
       $loss       = "";
@@ -468,14 +468,13 @@ function getHeardList($logLines, $onlyLast) {
          if(!$id)
              $id="";
       }
-      
-      
+
       $target = substr($logLine, $topos + 3);
       $target = preg_replace('/\s/', '&nbsp;', $target);
       if (defined("RESOLVETGS")) {
          $target = $target." ".getTGName($target);
       }
-      
+
       $source = "RF";
       if (strpos($logLine,"network") > 0 ) {
          $source = "Net";
@@ -752,7 +751,7 @@ function getActualLink($logLines, $mode) {
 // 01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901
 //I: 2018-06-04 11:04:22.190 The ID of this repeater is 50735
 //M: 2018-06-04 11:04:22.202 No connection startup
-//M: 2018-06-04 11:04:24.005 Linked to IT C4FM Piemonte		   
+//M: 2018-06-04 11:04:24.005 Linked to IT C4FM Piemonte
 
 
          if (isProcessRunning("YSFGateway")) {
@@ -806,7 +805,7 @@ function getActualReflector($logLines, $mode) {
          return $to;
       }
    }
-  
+
    if (file_exists('/tmp/DMR2RefState.txt')) {
       $fp         = fopen('/tmp/DMR2RefState.txt', 'r');
       $contents   = fread($fp, filesize("/tmp/DMR2RefState.txt"));
@@ -835,12 +834,12 @@ function getActualReflector2($logLines, $mode) {
                return _("Reflector")." ".$from;
             }
          }
-         $source = "RF";
+         $source = "TLV";
          if (strpos($logLine,"network") > 0 ) {
             $source = "Net";
          }
 
-         if ( $source == "RF") {
+         if ( $source == "TLV") {
             $to = substr($logLine, strpos($logLine, "to") + 3);
             if (strlen($to) < 6 && startsWith($to, "4")) {
                return _("Reflector")." ".$to." ("._("not cfmd").")";
