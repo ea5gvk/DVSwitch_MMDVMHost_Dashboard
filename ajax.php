@@ -88,7 +88,7 @@ if ($_GET['section'] == "localTx") {
       $call_canon = preg_replace('/\s+\w$/', '', $listElem[2]);
       if (defined("ENABLEXTDLOOKUP")) {
       	 $listElem[11] ="";
-         if ($listElem[6] == "RF" && ($listElem[1]=="D-Star" || startsWith($listElem[1], "DMR") || $listElem[1]=="YSF" || $listElem[1]=="P25" || $listElem[1]=="NXDN")) {
+         if ($listElem[6] == "TLV" && ($listElem[1]=="D-Star" || startsWith($listElem[1], "DMR") || $listElem[1]=="YSF" || $listElem[1]=="P25" || $listElem[1]=="NXDN")) {
             $listElem[3] = getName($call_canon);
             if ($listElem[2] !== "??????????") {
                if (!is_numeric($listElem[2])) {
@@ -105,7 +105,7 @@ if ($_GET['section'] == "localTx") {
          }
       } else {
           $listElem[10] ="";
-         if ($listElem[5] == "RF" && ($listElem[1]=="D-Star" || startsWith($listElem[1], "DMR") || $listElem[1]=="YSF" || $listElem[1]=="P25" || $listElem[1]=="NXDN")) {
+         if ($listElem[5] == "TLV" && ($listElem[1]=="D-Star" || startsWith($listElem[1], "DMR") || $listElem[1]=="YSF" || $listElem[1]=="P25" || $listElem[1]=="NXDN")) {
             if ($listElem[2] !== "??????????") {
                if (!is_numeric($listElem[2])) {
                   if (defined("SHOWQRZ")) {
