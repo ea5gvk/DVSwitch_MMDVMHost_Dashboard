@@ -8,7 +8,7 @@ system temperature, cpu-load ... and it shows a last-heard-list.
 
 It relies on MMDVM_Bridge (see https://dvswitch.groups.io/g/main).
 
-Based on DG9VH code, mod by EA4GKQ
+Based on DG9VH code, mod by EA4GKQ and N4IRS
 
 Required are
 ============
