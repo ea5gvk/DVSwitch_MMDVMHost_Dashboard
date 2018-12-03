@@ -425,7 +425,7 @@ function getHeardList($logLines, $onlyLast) {
                   break;
                case "DMR":
                   $ts2duration    = $duration;
-                  $ts2loss        = $loss;
+                  $ts2loss        = "";
                   $ts2ber         = $ber;
                   $ts2rssi        = $rssi;
                   break;
