@@ -18,7 +18,7 @@ Required are
 
 Installation
 ============
-* Please ensure to not put loglevels at 0 in MMDVM.ini.
+* Please ensure to not put loglevels at 0 in MMDVM_Bridge.ini.
 * Copy all files into your webroot and enjoy working with it.
 * Create a config/config.php by calling setup.php and giving suitable values
 * If Dashboard is working, remove setup.php from your webroot
@@ -37,11 +37,11 @@ At the moment there are several information-sections shown:
 * Bridge Info:
   Here are some basic Bridge info and link-states
 * Enabled Modes
-  This is a list of enabled modes. If green, it's enabled, if grey, it's disabled. If it is red, there is an error-state with MMDVMHost or ircddbgateway.
+  This is a list of enabled modes. If green, it's enabled, if grey, it's disabled. If it is red, there is an error-state with MMDVM_Bridge or ircddbgateway.
 * Last Heard List of today's x callsigns:
   This is a list of the last x callsigns heard in general in the system over all modes and directions. X is to be configured in /config/config.php
 * Today's last 10 local transmissions:
-  For better debugging/calibrating etc. the last 10 local transmissions (RF-side of the repeater) are listed.
+  For better debugging/calibrating etc. the last 10 local transmissions (TLV-side of the repeater) are listed.
 
 New features by EA4GKQ
 ======================
